@@ -4,23 +4,54 @@ body{
 }
 
 
-.nav{
+/* .nav{
     background-color: #0a0a0a;
-    /* margin-left: 10%;
-    margin-right: 10%; */
-    /* position: absolute; */
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
     justify-content: space-between;
+} */
+
+
+nav{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0% 10%
 }
 
-.links{
-    margin-right: 100px;
+.navbar .navbar-nav .nav-link {
+    color: #dc3545;
+    font-size: 1.1em;
 }
-
-
-
+.navbar .navbar-nav .nav-link:hover {
+    color: #dc3545;
+}
+.navbar .navbar-nav .nav-item {
+    position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /* right: 0; */
+    /* margin: auto; */
+    background-color: #e9204f;
+    width: 0%;
+    content: "";
+    height: 4px;
+    transition: all 0.5s;
+}
+  
+.navbar .navbar-nav .nav-item:hover::after {
+    width: 40%;
+}
+.logo img{
+    height: 5rem;
+    width: 18rem;
+    padding: 1vh 0;
+}
 
 li{
     display: inline-block;
@@ -32,7 +63,7 @@ li{
 }
 
 .background {
-    background-image: url('Images/studio-portrait-blonde-businesswoman-glasses-white-blouse-black-skirt-against-dark-background-successful-woman-stylish-girl-concept.jpg'); /* Replace with your image URL */
+    background-image: url('Images/bg-img.jpg'); /* Replace with your image URL */
     background-size: cover; /* This makes the image cover the entire div */
     background-position: center; 
     height: 100vh;
@@ -44,26 +75,11 @@ li{
 }
 
 .btn-getting-started{
-    /* padding: 15px 30px;
-    font-size: 20px;
-    font-weight: 600;
-    width: max-content;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    filter: brightness(0.8);
-    color: white;
-    border-color: rgb(255,51,164);
-    margin-top: auto;
-    margin-bottom: auto;
-
-    &:hover{
-        filter: brightness(1);
-    } */
 
     color: white;
     width: max-content;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
   /* margin: 10px; */
   margin: auto 0;
   padding: 15px 30px;
@@ -123,16 +139,16 @@ li{
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    background-color: rgb(211,211,211);
-    padding:20px;
-    font-size: 3vh;
+    background-color: rgb(243,243,243);
+    padding:3vh 3vh;
+    font-size: 2vh;
     &:hover{
         background-color: #e9204f;
         color: white;
     }
 }
 .serve-text{
-    font-size: 3vh;
+    font-size: 2.2vh;
 
 }
 
@@ -149,14 +165,22 @@ li{
 .work{
     padding: 5% 10%;
 }
+.subhead1{
+    display: flex; flex-direction: column; gap:30px;
+    width: 50%;
+}
+.subhead2{
+    width: 50%;
+}
 .head{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .view-all-btn{
-    color: rgb(7, 7, 7);
+    color: black;
     width: max-content;
+    background-color: rgba(0, 0, 0, 0);
   text-decoration: none;
   margin: auto 0;
   font-size: 2vh;
@@ -236,7 +260,7 @@ li{
     color: white;
     width: max-content;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
   padding: 10px 20px;
   border: 3px solid #e9204f;
   text-align: center;
@@ -271,7 +295,7 @@ li{
 .icons{
     height: 60px;
     width: 60px;
-    background-color: rgb(27,27,27);
+    background-color: rgb(0,0,0,0);
     border-radius: 50%;
     /* box-shadow: 0px 10px 10px rgba(0,0,0,0.1); */
     display: flex;
@@ -387,6 +411,7 @@ li{
   }
 }
 
+
 @media (max-width: 768px) {
     .serviece-items{
         grid-template-columns: 1fr;
@@ -409,6 +434,12 @@ li{
         padding: 1% 5%;
         align-items: center;
         justify-items: center;
+    }
+    .subhead1{
+        width: 100%;
+    }
+    .subhead2{
+        width: 100%;
     }
 }
 

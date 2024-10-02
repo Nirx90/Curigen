@@ -49,8 +49,9 @@ nav{
 }
 .logo img{
     height: 5rem;
-    width: 18rem;
-    padding: 1vh 0;
+    width: 15rem;
+    /* padding: 1vh 0; */
+    background-color: #fff;
 }
 
 li{
@@ -66,7 +67,7 @@ li{
     background-image: url('Images/bg-img.jpg'); /* Replace with your image URL */
     background-size: cover; /* This makes the image cover the entire div */
     background-position: center; 
-    height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     /* justify-content: start;  */
@@ -81,7 +82,7 @@ li{
   text-decoration: none;
   background: rgba(0, 0, 0, 0);
   /* margin: 10px; */
-  margin: auto 0;
+  margin: 10% 0%;
   padding: 15px 30px;
   border: 3px solid #e9204f;
   text-align: center;
